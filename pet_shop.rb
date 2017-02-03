@@ -50,8 +50,6 @@ end
 
 def find_pet_by_name(pet_shop, pet_name)
 
-  found_pet = {}
-
   for single_pet in pet_shop[:pets]
 
     if single_pet[:name] == pet_name
@@ -59,6 +57,5 @@ def find_pet_by_name(pet_shop, pet_name)
     end
 
   end
-
 
 end
