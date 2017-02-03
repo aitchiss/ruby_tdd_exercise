@@ -25,7 +25,6 @@ def stock_count(pet_shop)
   return stock
 end
 
-#refactor to make it return an array of pet hashes
 
 def pets_by_breed(pet_shop, breed)
   
@@ -53,4 +52,14 @@ def find_pet_by_name(pet_shop, pet_name)
   end
 
   return nil
+end
+
+def remove_pet_by_name(pet_shop, pet_name)
+
+  for single_pet in pet_shop[:pets]
+    if single_pet[:name] == pet_name
+      pet_shop[:pets].delete(single_pet)
+    end
+  end
+
 end
