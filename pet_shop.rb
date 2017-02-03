@@ -25,26 +25,20 @@ def stock_count(pet_shop)
   return stock
 end
 
+#refactor to make it return an array of pet hashes
+
 def pets_by_breed(pet_shop, breed)
+  
   pets = []
 
-  for animal in pet_shop[:pets]
-
-    pets << animal[:breed]
-
-  end
-
-  single_breed_array = []
-
-  for breed_name in pets
-
-    if breed_name == breed
-      single_breed_array << breed_name
+  for single_pet in pet_shop[:pets]
+    if single_pet[:breed] == breed
+      pets << single_pet
     end
   end
 
-  return single_breed_array
-
+return pets
+  
 end
 
 
